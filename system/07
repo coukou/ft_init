@@ -1,1 +1,1 @@
-pgred sshd | head -1
+pgrep sshd | head -1

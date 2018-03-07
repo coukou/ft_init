@@ -4,11 +4,11 @@ LOG_FILE='/var/log/update_script.log'
 
 exec_cmd()
 {
-	echo "------------------\n" >> $LOG_FILE
-	echo "$1:\n" >> $LOG_FILE
-	echo "$($1)\n" >> $LOG_FILE
+	echo -e "------------------\n" >> $LOG_FILE
+	echo -e "$1:\n" >> $LOG_FILE
+	echo -e "$($1)\n" >> $LOG_FILE
 }
 
-echo "\nWEEKLY PACKAGE UPDATE\nDATE: $(date)\n" > $LOG_FILE
+echo -e "\nWEEKLY PACKAGE UPDATE\nDATE: $(date)\n" > $LOG_FILE
 exec_cmd "apt-get update -q"
 exec_cmd "apt-get upgrade -q"
